@@ -1,0 +1,46 @@
+# Build artifacts
+*.exe
+*.obj
+*.exp
+*.lib
+*.pdb
+__pycache__/
+*.pyc
+
+# GUI scratch state, rewritten on every run
+src/_gui_config.json
+src/_gui_debug.json
+src/_gui_image.png
+
+# Generated viewer data: rebuild with src/tilegrid.py + src/surface2.py.
+# 3MB+ of base64 tile grids, and specific to whichever worlds were loaded.
+viewer/_data.js
+
+# World files and decoded dumps: the user's saves, not source
+*.wld
+*.map
+*.b64
+
+# Solver scratch configs
+src/_t*.json
+src/_one.json
+src/_gap.json
+
+# Decompiled Terraria source: a local reference only. It is the game's
+# copyrighted code, so it is not committed; regenerate with ILSpy if needed.
+dec/
+
+# Playwright screenshot output from automated checks
+.playwright-mcp/
+mark_test.png
+
+# Ad-hoc solver configs from debugging sessions, referenced by nothing
+src/t_*.json
+src/test_*.json
+src/pred*.txt
+*.exe.bak
+
+# Sprites are extracted from your own Terraria install by
+# src/extract_sprites.py. They are the game's art, so they are not
+# redistributed here.
+assets/
